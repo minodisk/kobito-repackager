@@ -6,7 +6,7 @@ Dockerfile for repackaging Kobito for Windows to Mac OSX or Linux.
 
 ```bash:terminal
 git clone git@github.com:minodisk/kobito-repackager.git
-cd kobito-porter
+cd kobito-repackager
 docker-compose build
 ```
 
