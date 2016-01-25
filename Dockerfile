@@ -1,6 +1,6 @@
 FROM node:5.5.0
 
-WORKDIR /src/porter
+WORKDIR /src/repackager
 
 RUN \
   apt-get update && \
@@ -23,7 +23,7 @@ RUN \
   rm -rf dist && \
   mkdir -p dist
 
-WORKDIR /src/porter/tmp
+WORKDIR /src/repackager/tmp
 
 ENV \
   ELECTRON=0.36.5 \
@@ -46,7 +46,7 @@ CMD \
     --platform=$PLATFORM \
     --arch=$ARCH \
     --icon=kobito.icns \
-    --cache=/src/porter/cache \
+    --cache=/src/repackager/cache \
     --out=../dist \
     --overwrite && \
   cp kobito/readme.txt ../dist/$name/readme.txt && \
