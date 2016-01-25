@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cat << EOF > $HOME/.local/share/applications/kobito.desktop
+[Desktop Entry]
+Type=Application
+Name=Kobito
+Comment=Kobito for Ubuntu
+Exec=$(pwd)/dist/kobito-linux-x64/kobito
+Icon=$(pwd)/dist/kobito-linux-x64/icon.png
+Terminal=false
+Categories=Application;Development
+EOF

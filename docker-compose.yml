@@ -1,0 +1,26 @@
+osx:
+  build: .
+  volumes:
+    - ./dist:/src/porter/dist
+    - /src/porter/cache
+  environment:
+    PLATFORM: darwin
+    ARCH: x64
+
+linux_x64:
+  build: .
+  volumes:
+    - ./dist:/src/porter/dist
+    - /src/porter/cache
+  environment:
+    PLATFORM: linux
+    ARCH: x64
+
+linux_ia32:
+  build: .
+  volumes:
+    - ./dist:/src/porter/dist
+    - /src/porter/cache
+  environment:
+    PLATFORM: linux
+    ARCH: ia32
